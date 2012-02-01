@@ -1,0 +1,111 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.scraperwiki.com:443/api/1.0/scraper/getinfo?format=jsondict&name=
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.0
+      date:
+      - Wed, 01 Feb 2012 07:52:06 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-headers:
+      - ! '*'
+      content-disposition:
+      - attachment; filename=scraperinfo.json
+      access-control-max-age:
+      - '1000'
+      vary:
+      - Cookie
+      access-control-allow-origin:
+      - ! '*'
+      access-control-allow-methods:
+      - POST, GET
+      set-cookie:
+      - csrftoken=0e7b330eb3e4484eccabd15e3c9ffb68; expires=Wed, 30-Jan-2013 07:52:06
+        GMT; Max-Age=31449600; Path=/
+    body: ! '[]'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.scraperwiki.com:443/api/1.0/scraper/getinfo?format=jsondict&name=linuxconfau_2012_programme
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.0
+      date:
+      - Wed, 01 Feb 2012 07:52:08 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-headers:
+      - ! '*'
+      content-disposition:
+      - attachment; filename=scraperinfo.json
+      access-control-max-age:
+      - '1000'
+      vary:
+      - Cookie, Accept-Encoding
+      access-control-allow-origin:
+      - ! '*'
+      access-control-allow-methods:
+      - POST, GET
+      set-cookie:
+      - csrftoken=1aa59809d6765052b4d818cc75449923; expires=Wed, 30-Jan-2013 07:52:08
+        GMT; Max-Age=31449600; Path=/
+    body: ! "[\n    {\n        \"code\": \"require 'json'\\nrequire 'open-uri'\\n\\nschedule
+      = JSON.parse(open('http://lca2012.linux.org.au/programme/schedule/json').read)\\n\\nschedule.each
+      do |s|\\n  ScraperWiki.save_sqlite([\\\"Id\\\"], s)\\nend\\n\", \n        \"datasummary\":
+      {\n            \"tables\": {\n                \"swdata\": {\n                    \"keys\":
+      [\n                        \"Description\", \n                        \"Title\",
+      \n                        \"Event\", \n                        \"Start\", \n
+      \                       \"Duration\", \n                        \"Id\", \n                        \"Room
+      Name\", \n                        \"URL\", \n                        \"Presenter_emails\",
+      \n                        \"Presenters\"\n                    ], \n                    \"count\":
+      131, \n                    \"sql\": \"CREATE TABLE `swdata` (`Description` text,
+      `Title` text, `Event` integer, `Start` text, `Duration` text, `Id` integer,
+      `Room Name` text, `URL` text, `Presenter_emails` text, `Presenters` text)\"\n
+      \               }\n            }, \n            \"total_rows\": 131, \n            \"filesize\":
+      135168\n        }, \n        \"description\": \"The #lca2012 schedule JSON pulled
+      into ScraperWiki.\\n\\nNow you can download it as SQLite or CSV, query it using
+      the API, create ScraperWiki views with it, etc.\", \n        \"language\": \"ruby\",
+      \n        \"title\": \"linux.conf.au 2012 Programme\", \n        \"tags\": [],
+      \n        \"short_name\": \"linuxconfau_2012_programme\", \n        \"userroles\":
+      {\n            \"owner\": [\n                \"henare\"\n            ]\n        },
+      \n        \"last_run\": \"2012-01-16T01:25:50\", \n        \"created\": \"2012-01-16T01:11:39\",
+      \n        \"runevents\": [\n            {\n                \"still_running\":
+      false, \n                \"pages_scraped\": 1, \n                \"run_started\":
+      \"2012-01-16T01:25:50\", \n                \"last_update\": \"2012-01-16T01:25:50\",
+      \n                \"runid\": \"1326677122.264740_52832efe-6443-477d-91d6-2315f4947445\",
+      \n                \"records_produced\": 131\n            }, \n            {\n
+      \               \"still_running\": false, \n                \"pages_scraped\":
+      1, \n                \"run_started\": \"2012-01-16T01:13:43\", \n                \"last_update\":
+      \"2012-01-16T01:13:43\", \n                \"runid\": \"1326676373.328335_994b1422-e1a7-4b60-bf72-78db78d33a80\",
+      \n                \"records_produced\": 131\n            }\n        ], \n        \"records\":
+      131, \n        \"wiki_type\": \"scraper\", \n        \"privacy_status\": \"public\",
+      \n        \"run_interval\": -1, \n        \"attachable_here\": [], \n        \"attachables\":
+      [], \n        \"history\": [\n            {\n                \"date\": \"2012-01-16T01:11:39\",
+      \n                \"version\": 0, \n                \"user\": \"henare\", \n
+      \               \"session\": \"Mon, 16 Jan 2012 01:05:01 GMT\"\n            }\n
+      \       ]\n    }\n]"
+    http_version: '1.1'
