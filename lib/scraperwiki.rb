@@ -1,5 +1,11 @@
-require "scraperwiki/version"
+module ScraperWiki
+  def self.scraper
+    Scraper
+  end
 
-module Scraperwiki
-  # Your code goes here...
+  class Scraper
+    def self.getinfo
+      []
+    end
+  end
 end

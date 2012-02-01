@@ -11,6 +11,8 @@ Gem::Specification.new do |s|
   s.summary     = %q{Interact with ScraperWiki via the command line}
   s.description = %q{Allows you to use ScraperWiki via the command line including running scrapers locally}
 
+  s.add_development_dependency "rspec"
+
   s.rubyforge_project = "scraperwiki"
 
   s.files         = `git ls-files`.split("\n")
