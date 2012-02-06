@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Scraperwiki::VERSION
   s.authors     = ["Henare Degan"]
   s.email       = ["henare.degan@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "http://www.henaredegan.com"
   s.summary     = %q{Interact with ScraperWiki via the command line}
   s.description = %q{Allows you to use ScraperWiki via the command line including running scrapers locally}
 
