@@ -3,7 +3,7 @@ require 'spec_helper'
 describe ScraperWiki do
   describe "scraper" do
     before do
-      VCR.insert_cassette 'scraper', :record => :all
+      VCR.insert_cassette 'scraper'
     end
 
     after do

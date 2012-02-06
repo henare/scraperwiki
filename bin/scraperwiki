@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'scraperwiki'
+
+if ARGV.first == 'clone'
+  p ScraperWiki.scraper.getinfo(:name => ARGV[1])
+end
