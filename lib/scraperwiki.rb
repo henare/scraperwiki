@@ -5,6 +5,12 @@ module ScraperWiki
     Scraper
   end
 
+  def self.clone(name)
+    scraper = ScraperWiki.scraper.getinfo(:name => name)
+    raise "Scraper is not Ruby" if scraper["language"] != "ruby"
+    File.open("#{name}.rb", 'w') { |f| f.write(scraper["code"]) }
+  end
+
   class Scraper
     include HTTParty
     base_uri 'https://api.scraperwiki.com/api/1.0/scraper'

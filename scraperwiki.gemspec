@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.description = %q{Allows you to use ScraperWiki via the command line including running scrapers locally}
 
   s.add_dependency "httparty"
+  s.add_dependency "trollop"
 
   s.add_development_dependency "rspec"
   s.add_development_dependency "webmock"
