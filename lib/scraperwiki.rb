@@ -11,6 +11,10 @@ module ScraperWiki
     File.open("#{name}.rb", 'w') { |f| f.write(scraper["code"]) }
   end
 
+  def self.run(name)
+    require name
+  end
+
   class Scraper
     include HTTParty
     base_uri 'https://api.scraperwiki.com/api/1.0/scraper'

@@ -15,6 +15,10 @@ module ScraperWiki
           Trollop::options do
             command = {:action => command, :scraper_name => ARGV[0]}
           end
+        when "run"
+          Trollop::options do
+            command = {:action => command, :scraper_name => ARGV[0]}
+          end
         else
           Trollop::die "unknown subcommand #{command.inspect}"
         end
@@ -24,6 +28,10 @@ module ScraperWiki
           raise "No scraper name specificed" if command[:scraper_name].nil?
           require 'scraperwiki'
           ScraperWiki.clone(command[:scraper_name])
+        when "run"
+          raise "No scraper name specificed" if command[:scraper_name].nil?
+          require 'scraperwiki'
+          ScraperWiki.run(File.expand_path(command[:scraper_name]))
       end
     end
   end
