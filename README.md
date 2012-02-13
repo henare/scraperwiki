@@ -27,3 +27,5 @@ This gets the current revision of the scraper code from ScraperWiki.
 
 Will run the scraper locally, outputting formatted data to the terminal for
 your debugging pleasure.
+
+**TODO**: Mimic ScraperWiki methods like `save_sqlite` so this actually works
